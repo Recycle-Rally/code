@@ -17,7 +17,7 @@ long readUltrasonicDistance(int triggerPin, int echoPin) //Create a
 
 void setup()
 {
-  Serial.begin(9600);
+  Serial.begin(9600); // Begin the serial monitor
 }
 
 void loop()
@@ -26,9 +26,9 @@ void loop()
   cm = 0.01723 * readUltrasonicDistance(7, 7);
   // convert to inches by dividing by 2.54
   inches = (cm / 2.54);
-  Serial.print(inches);
-  Serial.print("in, ");
-  Serial.print(cm);
-  Serial.println("cm");
+  Serial.print(inches); // Print inches variable
+  Serial.print("in, "); // Print "in, "
+  Serial.print(cm); // Print cm variable
+  Serial.println("cm"); // Print "cm"
   delay(100); // Wait for 100 millisecond(s)
 }
