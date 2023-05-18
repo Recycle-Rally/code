@@ -15,27 +15,27 @@ int R = 0; // Define R to a number, 0
 int L1 = 0; // Define L1 to a number, 0
 int R1 = 0; // Define R1 to a number, 0
 Servo servo; // Create servo 
-AF_DCMotor M1(1); // Set M1 to 1
-AF_DCMotor M2(2);
-AF_DCMotor M3(3);
-AF_DCMotor M4(4);
+AF_DCMotor M1(1); // Set M1 to channel 1
+AF_DCMotor M2(2); // Set M2 to channel 2
+AF_DCMotor M3(3); // Set M3 to channel 3
+AF_DCMotor M4(4); // Set M4 to channel 4
 void setup() {
-  Serial.begin(9600);
-  pinMode(Trig, OUTPUT);
-  pinMode(Echo, INPUT);
-  servo.attach(motor);
-  M1.setSpeed(Speed);
-  M2.setSpeed(Speed);
-  M3.setSpeed(Speed);
-  M4.setSpeed(Speed);
+  Serial.begin(9600); // Begin Serial
+  pinMode(Trig, OUTPUT); // Set Trig to output
+  pinMode(Echo, INPUT); // Set Echo to input
+  servo.attach(motor); // Attach motor to the servo
+  M1.setSpeed(Speed); // Set M1 to Speed
+  M2.setSpeed(Speed); // Set M2 to Speed
+  M3.setSpeed(Speed); // Set M3 to Speed
+  M4.setSpeed(Speed); // Set M4 to Speed
 }
 void loop() {
-  Obstacle();
-  //Bluetoothcontrol();
-  //voicecontrol();
+  Obstacle(); // Obstacle Avoidance
+  //Bluetoothcontrol(); // Bluetooth Control
+  //voicecontrol(); // Voice Control
 }
 void Bluetoothcontrol() {
-  if (Serial.available() > 0) {
+  if (Serial.available() > 0) { 
     value = Serial.read();
     Serial.println(value);
   }
