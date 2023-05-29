@@ -13,14 +13,16 @@ if(Serial.available()){ //If serial is available
 }
  
 if(t == '1'){            //If the serial outputs 1
-  digitalWrite(13,HIGH); //Write 
-  digitalWrite(12,LOW);
-  digitalWrite(11,HIGH);
-  digitalWrite(10,LOW);
+  digitalWrite(13,HIGH); //Write motor to high
+  digitalWrite(12,LOW);//Write motor to low
+  digitalWrite(11,HIGH);//Write motor to high
+  digitalWrite(10,LOW);//Write motor to low
+ 
+ //Doing so makes the car go forwards
 }
  
-else if(t == '2'){      //move reverse (all motors rotate in reverse direction)
-  digitalWrite(13,LOW);
+else if(t == '2'){      //If the serial outputs 2
+  digitalWrite(13,LOW); // Write all 
   digitalWrite(12,HIGH);
   digitalWrite(11,LOW);
   digitalWrite(10,HIGH);
