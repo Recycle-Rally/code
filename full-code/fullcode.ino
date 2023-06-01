@@ -1,15 +1,11 @@
-#include <Servo.h>
-Servo myServo;
 int state = 0;
-int servoVal = 0;
-const int motorPin1 = 13; // Pin 15 of L293
-const int motorPin2 = 12; // Pin 10 of L293
+const int motorPin1 = 13;
+const int motorPin2 = 12;
 //Right Motor Connections
-const int motorPin3 = 11; // Pin 7 of L293
+const int motorPin3 = 11;
 const int motorPin4 = 10;
 void setup() 
 {
-  myServo.attach(12);
   pinMode(10, OUTPUT);
   pinMode(11, OUTPUT);
   pinMode(12, OUTPUT);
